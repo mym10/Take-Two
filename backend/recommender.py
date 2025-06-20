@@ -3,13 +3,16 @@ from collections import defaultdict
 import requests
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+from dotenv import load_dotenv
+import os
 
 # Setup MongoDB connection
 client = MongoClient("mongodb://localhost:27017/")
 db = client["users"]
 favourites_collection = db["favourites"]
 
-OMDB_API_KEY = "592e86cd"
+load_dotenv()
+OMDB_API_KEY =os.getenv("OMDB_API_KEY")
 
 def build_genre_profile(favorites):
     genre_weights = defaultdict(float)

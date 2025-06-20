@@ -6,6 +6,8 @@ from pydantic import BaseModel
 from fastapi import HTTPException
 from fastapi import Request
 from recommender import recommend_movies_for_user
+from dotenv import load_dotenv
+import os
 
 app = FastAPI()
 
@@ -32,7 +34,8 @@ class LoginRequest(BaseModel):
     username: str
     password: str
 
-API_KEY = "592e86cd"
+load_dotenv()
+API_KEY = os.getenv("OMDB_API_KEY")
 
 @app.get("/movie/{title}")
 def get_movie(title: str):
