@@ -1,0 +1,46 @@
+# ---- Node.js / React (Frontend) ----
+/login-react-app/node_modules
+/login-react-app/.env
+/login-react-app/build
+/login-react-app/.DS_Store
+/login-react-app/.cache
+/login-react-app/yarn.lock
+/login-react-app/package-lock.json
+/login-react-app/dist
+
+# ---- Python / FastAPI (Backend) ----
+/backend/__pycache__/
+/backend/*.pyc
+/backend/env/
+/backend/.env
+/backend/.DS_Store
+/backend/.pytest_cache/
+/backend/.vscode/
+/backend/.mypy_cache/
+/backend/.coverage
+/backend/coverage.xml
+
+# ---- OS / Editor garbage ----
+*.log
+*.swp
+*.swo
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
+.env
+*.sqlite3
+
+# ---- MongoDB dump files (if any) ----
+dump/
+*.bson
+*.json
+
+# ---- Misc ----
+.idea/
+.vscode/
+*.local
+*.sass-cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
